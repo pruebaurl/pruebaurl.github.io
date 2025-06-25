@@ -37,3 +37,14 @@
 .print{
     font-size: 85%;
 }
+
+
+/* Ancho fijo para exportar siempre igual (8.5 pulgadas * 96px = 816px) */
+
+
+/* Para impresión PDF desde móviles */
+@media (max-width: 768px) {
+  #downloadBtn {
+    display: none;
+  }
+}
