@@ -1,50 +1,51 @@
-*{
-    font-family: 'Montserrat', sans-serif;
+/* Tipografía y base */
+* { box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; background: #f5f7fb; color: #1f2a37; }
+h1,h2,h3,h4,h5 { letter-spacing: .2px; }
+
+/* Layout */
+.resume-wrapper { background: #fff; }
+.left-col {
+  background: linear-gradient(180deg, #223a5e 0%, #2c3e50 60%, #34495e 100%);
 }
+.right-col { background-color: #fbfbfc; }
 
-/* Ajuste color columna Izquierda */
-.bg-primary{
-    background-color: #2c3e50 !important;
+/* Avatar */
+.avatar { width: 140px; height: 140px; object-fit: cover; }
+
+/* Titulares */
+.section-title { color: #e8eef7; text-transform: uppercase; letter-spacing: .8px; }
+.name { font-size: 1.35rem; }
+.text-light-50 { color: rgba(255,255,255,.8); }
+
+/* Chips */
+.chip {
+  display: inline-block;
+  padding: .35rem .6rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.22);
+  color: #fff;
+  font-size: .8rem;
+  line-height: 1;
+  transition: transform .2s ease, background .2s ease;
 }
+.chip:hover { transform: translateY(-1px); background: rgba(255,255,255,.18); }
 
-/* img{
-    max-width: 30px !important;
-} */
+/* Cards & hover */
+.card { transition: transform .25s ease, box-shadow .25s ease; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,.08); }
 
-.progress{
-    background-color: rgba(255,255,255,0.2);
-}
+/* Progress bars */
+.progress { background-color: rgba(255,255,255,.22); }
+.progress .progress-bar { background-color: #ffffff; }
 
-.progress-bar{
-    background-color: white;
-}
+/* Botón PDF */
+#downloadBtn { font-size: 0.95rem; border-width: 2px; }
 
-/* Cambio color texto col derecha */
-.text-primary{
-    color: #3498db !important;
-}
-
-/* Efecto para las CARDS */
-.card{
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.print{
-    font-size: 85%;
-}
-
-
-/* Ancho fijo para exportar siempre igual (8.5 pulgadas * 96px = 816px) */
-
-
-/* Para impresión PDF desde móviles */
-@media (max-width: 768px) {
-  #downloadBtn {
-    display: none;
-  }
+/* Impresión (PDF) */
+@media print {
+  #downloadBtn { display: none !important; }
+  body { background: #fff; }
+  .resume-wrapper { box-shadow: none !important; }
 }
