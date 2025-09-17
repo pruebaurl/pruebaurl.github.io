@@ -17,7 +17,7 @@ h1,h2,h3,h4,h5 { letter-spacing: .2px; }
 .section-title { color: #e8eef7; text-transform: uppercase; letter-spacing: .8px; }
 .name { font-size: 1.35rem; }
 .text-light-50 { color: rgba(255,255,255,.8); }
-
+.text-primary {  color: #3498db !important;}
 /* Chips */
 .chip {
   display: inline-block;
